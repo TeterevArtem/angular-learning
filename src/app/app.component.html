@@ -2,6 +2,9 @@
 <app-post></app-post>
 <app-post></app-post>
 <app-post></app-post>
-<img width="200" [src]="img" alt="#">
-<input type="text" placeholder="Please type ..." (input)="handleInput($event)">
+<div class="img-container">
+    <img width="200" [src]="img" alt="#">
+</div>
+<input type="text" placeholder="Please type ..." (keyup.enter)="handleInput($event)" (blur)="onBlur(myInput.value)" #myInput>
+<button (click)="handleClick()" [value]="inputValue">Click me!</button>
 <p><strong>{{inputValue}}</strong></p>

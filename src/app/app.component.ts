@@ -19,4 +19,10 @@ export class AppComponent {
   handleInput(event: Event) {
     this.inputValue = (<HTMLInputElement>event.target).value;
   }
+  handleClick() {
+    this.inputValue = ""
+  }
+  onBlur (str: string) {
+    this.inputValue = str;
+  }
 }
