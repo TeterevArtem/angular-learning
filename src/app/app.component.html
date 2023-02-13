@@ -3,3 +3,5 @@
 <app-post></app-post>
 <app-post></app-post>
 <img width="200" [src]="img" alt="#">
+<input type="text" placeholder="Please type ..." (input)="handleInput($event)">
+<p><strong>{{inputValue}}</strong></p>
