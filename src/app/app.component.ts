@@ -1,31 +1,20 @@
 import { Component } from '@angular/core';
 
+export interface Post {
+  title: string,
+  text: string,
+  id?: number
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = '';
-  toggle:any = false;
-  array = [3, 5, 8, 13];
-  objects = [
-    {
-      title: "Posts",
-      author: "Artem",
-      content: [
-        {title: "Max", text: "Lorem 1"},
-        {title: "Max", text: "Lorem 2"},
-        {title: "Max", text: "Lorem 3"}
-      ]
-    },{
-      title: "Posts 2",
-      author: "Bladilen",
-      content: [
-        {title: "Max 2", text: "Lorem 1"},
-        {title: "Max 2", text: "Lorem 2"},
-        {title: "Max 2", text: "Lorem 3"}
-      ]
-    }
+  posts: Post[] = [
+    {title: "Хочу выучить Angular компоненты", text: "Я Все еще учу компоненты", id: 1},
+    {title: "Хочу выучить Angular пайпы", text: "Я Все еще учу пайпы", id: 2},
+    {title: "Хочу выучить Angular директивы", text: "Я Все еще учу директивы", id: 3},
   ]
 }
