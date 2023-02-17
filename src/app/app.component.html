@@ -1,9 +1,11 @@
 <h2>Hello Angular!!</h2>
 <button (click)="backgroundToggle = !backgroundToggle">Change Background</button>
-<div [ngStyle]="{
-  width: '100px',
-  height: '100px',
-  borderRadius:'10px',
-  marginTop: '10px',
-  background: backgroundToggle ? 'red' : 'blue'
-}"></div>
+<!--<div [ngStyle]="{-->
+<!--  width: '100px',-->
+<!--  height: '100px',-->
+<!--  borderRadius:'10px',-->
+<!--  marginTop: '10px',-->
+<!--  background: backgroundToggle ? 'red' : 'blue'-->
+<!--}"></div>-->
+<!--<p [ngClass]="{red: backgroundToggle, blue: !backgroundToggle}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, error.</p>-->
+<p [class.red]="backgroundToggle"[class.blue]="!backgroundToggle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, fugiat!</p>
