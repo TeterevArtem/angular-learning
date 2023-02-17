@@ -1,2 +1,9 @@
-<h2 class="app__title">{{title}}</h2>
-<input type="text" [(ngModel)]="title">
+<h2>Hello Angular!!</h2>
+<button (click)="backgroundToggle = !backgroundToggle">Change Background</button>
+<div [ngStyle]="{
+  width: '100px',
+  height: '100px',
+  borderRadius:'10px',
+  marginTop: '10px',
+  background: backgroundToggle ? 'red' : 'blue'
+}"></div>
