@@ -17,4 +17,8 @@ export class AppComponent {
     {title: "Хочу выучить Angular пайпы", text: "Я Все еще учу пайпы", id: 2},
     {title: "Хочу выучить Angular директивы", text: "Я Все еще учу директивы", id: 3},
   ]
+
+  updatePosts (post: Post) {
+    this.posts.unshift(post)
+  } 
 }
