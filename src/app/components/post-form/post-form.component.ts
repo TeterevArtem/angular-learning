@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { Post } from 'src/app/app.component';
 
 @Component({
@@ -12,6 +12,7 @@ export class PostFormComponent implements OnInit {
   //данная строка позволяет через декоратор @Output вывести данные из компонента в родителя
   //EventEmitter - это тип класса который позволяет отправить данные наверх
 
+  @ViewChild('inputTitle', {static: false}) inputRef:ElementRef
   title = "";
   text = "";
 
@@ -28,5 +29,9 @@ export class PostFormComponent implements OnInit {
       this.onAdd.emit(post);
       this.title = this.text = "";
     }
+  }
+
+  focusTitle (){
+    this.inputRef.nativeElement.focus();
   }
 }
