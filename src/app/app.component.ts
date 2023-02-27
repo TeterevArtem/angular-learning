@@ -18,7 +18,11 @@ export class AppComponent {
     {title: "Хочу выучить Angular директивы", text: "Я Все еще учу директивы", id: 3},
   ]
 
+  removePost (id:number) {
+    this.posts = this.posts.filter(post => post.id !== id)
+  }
+
   updatePosts (post: Post) {
     this.posts.unshift(post)
-  } 
+  }
 }
