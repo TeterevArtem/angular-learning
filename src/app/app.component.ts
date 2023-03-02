@@ -13,4 +13,5 @@ export interface Post {
 })
 export class AppComponent {
   e = Math.E;
+  str = "hello world"
 }
