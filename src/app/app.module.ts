@@ -6,13 +6,15 @@ import { FormsModule } from '@angular/forms';
 
 import {MultiplyPipe} from "./pipes/multiply.pipe";
 import { ExMarkPipe } from './pipes/ex-mark.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MultiplyPipe,
-    ExMarkPipe
+    ExMarkPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

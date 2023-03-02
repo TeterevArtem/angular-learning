@@ -1,15 +1,12 @@
 <div class="container">
   <h1>Angular Pipes</h1>
-  <p>{{ e | number: "1.1-5"}}</p>
-  <p>{{str | uppercase | lowercase | titlecase}}</p>
-  <p>{{str | titlecase | slice: 0:5}}</p>
-  <p>{{str | titlecase | slice: 5}}</p>
-  <p>{{str | titlecase | slice: 0:1}}</p>
-  <p>{{str | titlecase | slice: -1}}</p>
 
-  <div>{{ 10 | multi}}</div>
-  <div>{{ 10 | multi: 4}}</div>
-  <div>{{ 10 | multi: 13}}</div>
+  <input type="text" [(ngModel)]="search">
+  <button class="btn" (click)="searchField = 'title' ">title</button>
+  <button class="btn" (click)="searchField = 'text' ">text</button>
 
-  <p>{{"hello world       " | titlecase | exMark}}</p>
+  <div *ngFor="let post of posts | filter: search: searchField" class="post">
+    <h2>{{post.title}}</h2>
+    <p>{{post.text}}</p>
+  </div>
 </div>
