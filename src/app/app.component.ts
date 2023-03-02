@@ -12,17 +12,5 @@ export interface Post {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  posts: Post[] = [
-    {title: "Хочу выучить Angular компоненты", text: "Я Все еще учу компоненты", id: 1},
-    {title: "Хочу выучить Angular пайпы", text: "Я Все еще учу пайпы", id: 2},
-    {title: "Хочу выучить Angular директивы", text: "Я Все еще учу директивы", id: 3},
-  ]
-
-  removePost (id:number) {
-    this.posts = this.posts.filter(post => post.id !== id)
-  }
-
-  updatePosts (post: Post) {
-    this.posts.unshift(post)
-  }
+  e = Math.E;
 }
