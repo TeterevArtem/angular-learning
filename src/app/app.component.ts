@@ -1,13 +1,22 @@
-import { Component } from '@angular/core';
-import {AppCounterService} from "./services/counter.service";
+import {Component, OnInit} from '@angular/core'
+import {FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  constructor(public appCounterService: AppCounterService) {
+export class AppComponent implements OnInit{
+  constructor(){
 
   }
+  form: FormGroup
+
+  ngOnInit(){
+    this.form = new FormGroup({})
+  }
+  submit(){
+    console.log(this.form)
+  }
 }
+
