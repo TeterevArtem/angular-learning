@@ -1,12 +1,15 @@
 <div class="container">
-  <h1>Angular Pipes</h1>
-
-  <input type="text" [(ngModel)]="search">
-  <button class="btn" (click)="searchField = 'title' ">title</button>
-  <button class="btn" (click)="searchField = 'text' ">text</button>
-
-  <div *ngFor="let post of posts | filter: search: searchField" class="post">
-    <h2>{{post.title}}</h2>
-    <p>{{post.text}}</p>
+  <h1>Angular Services</h1>
+  <div class="card">
+    <h2>App counter: {{appCounterService.counter}}</h2>
+    <button class="btn" (click)="appCounterService.increase()">+</button>
+    <button class="btn" (click)="appCounterService.decrease()">-</button>
   </div>
+  <app-counter></app-counter>
+  <div class="card">
+    <h2>App counter: {{appCounterService.counter}}</h2>
+    <button class="btn" (click)="appCounterService.increase()">+</button>
+    <button class="btn" (click)="appCounterService.decrease()">-</button>
+  </div>
+  <app-counter></app-counter>
 </div>

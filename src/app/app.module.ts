@@ -3,18 +3,12 @@ import { BrowserModule } from '@angular/platform-browser'
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-
-import {MultiplyPipe} from "./pipes/multiply.pipe";
-import { ExMarkPipe } from './pipes/ex-mark.pipe';
-import { FilterPipe } from './pipes/filter.pipe';
-
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MultiplyPipe,
-    ExMarkPipe,
-    FilterPipe
+    CounterComponent,
   ],
   imports: [
     BrowserModule,
