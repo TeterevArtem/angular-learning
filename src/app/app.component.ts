@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core'
+import {FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'angular-leaning';
+export class AppComponent implements OnInit{
+  constructor(){
+
+  }
+  form: FormGroup
+
+  ngOnInit(){
+    this.form = new FormGroup({})
+  }
+  submit(){
+    console.log(this.form)
+  }
 }
+
