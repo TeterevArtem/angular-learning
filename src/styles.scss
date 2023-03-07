@@ -10,7 +10,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: #ccc;
   color: #333;
 }
 
@@ -47,7 +47,7 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
-  
+
   &:disabled {
     background: #ccc;
     color: #000;
