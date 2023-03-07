@@ -1,13 +1,13 @@
 <div class="container">
   <form class="card" [formGroup]="form" (ngSubmit)="submit()">
     <h1>Angular Forms</h1>
-
     <div class="form-control">
       <label>Email</label>
       <input type="text" placeholder="Email" formControlName="email">
       <div class="validation" *ngIf="form.get('email').invalid && form.get('email').touched">
         <small *ngIf="form.get('email').errors['required']">Поле не должно быть пустым</small>
         <small *ngIf="form.get('email').errors['email']">Ваш email не корректный</small>
+        <small *ngIf="form.get('email').errors['restrictedEmails']">Email {{form.get('email').value}} запрешен!!</small>
       </div>
     </div>
 
