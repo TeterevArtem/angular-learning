@@ -8,6 +8,7 @@
         <small *ngIf="form.get('email').errors['required']">Поле не должно быть пустым</small>
         <small *ngIf="form.get('email').errors['email']">Ваш email не корректный</small>
         <small *ngIf="form.get('email').errors['restrictedEmails']">Email {{form.get('email').value}} запрешен!!</small>
+        <small *ngIf="form.get('email').errors['uniqEmail']">Email {{form.get('email').value}} занят!!</small>
       </div>
     </div>
 

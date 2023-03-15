@@ -1,22 +1,24 @@
 import {Component, OnInit} from '@angular/core'
-import {FormGroup, FormControl, Validators, FormArray} from "@angular/forms";
+import {FormGroup, FormControl, Validators, FormArray, AbstractControl, NG_ASYNC_VALIDATORS} from "@angular/forms";
 import {MyValidator} from "./my.validator";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 
 export class AppComponent implements OnInit{
-  constructor(){
 
-  }
   form: FormGroup
 
   ngOnInit(){
     this.form = new FormGroup({
-      email: new FormControl('', [Validators.email, Validators.required, MyValidator.restrictedEmails]),
+      email: new FormControl('', [
+        Validators.email,
+        Validators.required,
+        MyValidator.restrictedEmails,
+      ],[MyValidator.uniqEmail]),
       pass: new FormControl('', [Validators.required, Validators.minLength(6)]),
       address: new FormGroup({
         country: new FormControl("ru", null),
@@ -30,6 +32,7 @@ export class AppComponent implements OnInit{
       console.log(this.form)
       const formData = {...this.form.value};
       console.log(formData);
+      this.form.reset();
     }
   }
   setCapital(){
