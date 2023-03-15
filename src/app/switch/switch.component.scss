@@ -1,0 +1,17 @@
+div{
+  display: inline-block;
+  button{
+    padding: .5rem 1rem;
+    color: #fff;
+    font-size: 1rem;
+    background: red;
+    border: none;
+    outline: none;
+    &.active{
+      background: green;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
